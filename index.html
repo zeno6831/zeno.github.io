@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
     <title>Meine Seite</title>
 </head>
 <body>
-    <h1>Willkommen auf meiner Website!</h1>
-    <p>Das ist mein erstes GitHub-Pages Projekt.</p>
+    <pre>
+/*
+Temporary Fixes
+Add your fixes below. Please include a clear comment describing what your fix does, and credit yourself with your Discord ID or GitHub username.
+
+Example:
+/*
+Makes the background of the User Information section transparent.
+Credit: Discord: mr.fluff. (801417053151428668) | GitHub: NFLD99
+*/
+.visual-refresh .panels_c48ade {
+background: transparent;
+} */
+
+/*
+the below should nuked the background forced by the visual refresh update
+Credit: GitHub: RedSousuke
+*/
+.visual-refresh .theme-dark, .visual-refresh.theme-dark {
+--activity-card-background: none;
+--autocomplete-bg: none;
+--background-floating: none;
+--background-mentioned: none;
+/* ... hier kannst du den restlichen Text einfügen ... */
+}
+    </pre>
 </body>
 </html>
