@@ -5,9 +5,8 @@
 </head>
 <body>
     <pre>
-/* 
-Temporary Fixes
-Add your fixes below. Please include a clear comment describing what your fix does, and credit yourself with your Discord ID or GitHub username.
+/* Temporary Fixes
+Macht Discord transparent und repariert den grünen Sprech-Ring.
 */
 
 /* Macht das User-Panel transparent */
@@ -119,7 +118,8 @@ Add your fixes below. Please include a clear comment describing what your fix do
   --text-link: var(--blue-new-26);
   --text-muted: var(--neutral-22);
   --text-normal: var(--neutral-9);
-  --text-positive: var(--green-new-24);
+  /* Wir erzwingen die Farbe hier für die Sprecher-Logik */
+  --text-positive: #23a559 !important; 
   --text-primary: var(--neutral-1);
   --text-secondary: var(--neutral-16);
   --text-warning: var(--yellow-new-22);
@@ -183,9 +183,10 @@ Add your fixes below. Please include a clear comment describing what your fix do
   --text-tertiary: rgba(0, 0, 0, .3);
 }
 
-/* Wiederherstellung des Sprech-Rings */
-.avatarSpeaking-3MqzwV, .speaking-32W9G5, .avatar-speaking {
-  box-shadow: inset 0 0 0 2px var(--green-new-24) !important;
+/* Letzter, ultimativer Fix für den grünen Ring */
+[class*="speaking"] {
+    box-shadow: inset 0 0 0 2px #23a559 !important;
+    border: 2px solid #23a559 !important;
 }
     </pre>
 </body>
