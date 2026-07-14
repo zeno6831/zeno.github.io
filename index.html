@@ -179,28 +179,24 @@ Add your fixes below.
   --text-tertiary: rgba(0,0,0,.3)
 }
 
-/* 1. Transparenz-Fix für das User-Popout Fenster */
-/* Wir nutzen eine Kombination aus Klassen, die Discord für diese Popouts verwendet */
-.userProfileOuter_c69a7b, 
-.userProfileInner_c69a7b,
-div[class*="userProfileOuter-"],
-div[class*="userProfileInner-"] {
-    background: transparent !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-    border: none !important;
+/* --- HIER BEGINNEN DIE FIXES --- */
+
+/* Grünen Rahmen beim Sprechen reparieren */
+.visual-refresh .theme-dark, .visual-refresh.theme-dark {
+    --voice-speaking-border: #3ba55d !important;
+    --status-positive-border: #3ba55d !important;
 }
 
-/* 2. Den Rahmen für die Sprech-Anzeige (VC) beibehalten */
-/* Wir erzwingen den Rahmen durch einen allgemein gehaltenen Selektor */
-div[class*="speaking-"] {
+/* Avatar-Umrandung erzwingen */
+.avatar-1EWyVD.speaking-1wNc_7,
+.avatar_f89da7.speaking_f89da7,
+.wrapper_c51b4e.speaking_c51b4e::after {
     box-shadow: inset 0 0 0 2px #3ba55d !important;
 }
 
-/* 3. Sicherstellen, dass das Popout nicht vom "Nuke"-Skript zerschossen wird */
-/* Da dein Skript alles auf 'none' setzt, müssen wir hier die Sichtbarkeit für das Profil erzwingen */
-div[class*="userProfileOuter-"] {
-    display: block !important;
-    opacity: 1 !important;
+/* Sicherstellen, dass User-Profile transparent bleiben */
+.userProfileOuter_c69a7b {
+    background: transparent !important;
 }
     </pre>
 </body>
